@@ -1,6 +1,10 @@
+#bandit overthewrire walkthrough
 <ul>
-  {% assign sorted_pages = site.pages | sort: 'title' %}
-  {% for page in sorted_pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% assign sorted_posts = site.posts | sort: 'title' %}
+  {% for post in sorted_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%b %d, %Y" }}
+    </li>
   {% endfor %}
 </ul>
+
